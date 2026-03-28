@@ -1,6 +1,5 @@
 from datetime import datetime
 import uuid
-
 from src.description_descriptor import DescriptionDescriptor
 from src.is_ready_descriptor import IsReadyDescriptor
 from src.priority_descriptor import PriorityDescriptor
@@ -19,12 +18,11 @@ class Task:
         self.priority = priority
         self.status = status
         self._created_at = datetime.now()
-    
+
     @property
     def id(self):
         return self._id
-    
+
     @property
     def created_at(self):
         return self._created_at
-    

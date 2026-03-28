@@ -1,4 +1,4 @@
-from asyncio import Task
+from src.task import Task
 
 
 def main() -> None:
@@ -8,13 +8,14 @@ def main() -> None:
     """
 
     task = Task("обработать заказ", 1, "new")
+
     print(task.id)
     print(task.description)
     print(task.is_ready)
-    
+
     task.status = "done"
     print(task.is_ready)
-    
+
     task.priority = 30 #упадет
 
 
